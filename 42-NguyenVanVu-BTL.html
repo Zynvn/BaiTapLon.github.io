@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acarne Lineage Wiki</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            background-image: url('D:/42-NguyenVanVu-BaiTapLon/images/background.jpg');
+            background-size: cover;
+        }
+        .header {
+            background-color: rgba(185, 212, 218, 0.5);
+            border-bottom: 2px solid #B9D4DA;
+            padding: 20px 0;
+            text-align: left;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .containerr {    
+            display: flex;
+            justify-content: space-around;
+            padding: 30px;
+            height: 82vh;
+
+        }
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: #ebebeb;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 20%;
+            box-sizing: border-box;
+            align-items: center;
+            height: 110%;
+        }
+        .columnb{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            overflow-y: auto;
+        }
+       .button {
+            font-size: 19px;
+            background-color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0);
+            border-radius: 15px;
+            margin: 3px;
+            padding: 30px;
+            text-align: center;
+            width: 320px;
+            font-weight: bold;
+            font-style: italic;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #ddd;
+            border: 1px solid black;
+        }
+        .buttonl{
+            font-size: 19px;
+            font-weight: bold;
+            font-style: italic;
+            background: transparent;
+            border: none;
+        }
+        .buttonl:focus {
+         outline: none
+        }
+        .modal-header {
+            background-color: #D9D9D9;
+            justify-content: center !important;
+        }
+        .p {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .custom-modal-body{
+            max-height: 800px;
+            overflow-y: auto;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header">
+        Acarne Lineage Wiki
+    </div>
+    <div class="containerr">
+        <div class="column">
+            <h4>Game Information</h4>
+                    <button type="button" class="buttonl" data-toggle="modal" data-target="#thong-tin-game">
+                        <div class="button">
+                            Thông tin về game
+                        </div>
+                      </button> 
+                <div class="button">
+                    <a href="https://www.roblox.com/games/10595058975/Balance-Update-Arcane-Lineage" target="_blank" style="text-decoration: none; color: inherit;">Link game</a>
+                    </div>
+                <div class="button">
+                    <a href="https://discord.com/invite/lineage" target="_blank" style="text-decoration: none; color: inherit;">Cộng đồng</a>
+                </div>
+            </div>
+        <div class="column">
+            <h4>Game System</h4>
+            <div class="columnb">
+                <button type="button" class="buttonl" data-toggle="modal" data-target="#Level">
+                    <div class="button">Chỉ số và cấp độ</div>
+                </button>
+                <button type="button" class="buttonl" data-toggle="modal" data-target="#gamemode">
+                    <div class="button">Chế độ chơi (độ khó)</div>
+                </button>
+                <div class="button">Giao diện chiến đấu</div>
+                <div class="button">Cấp độ chạm chán</div>
+                <div class="button">Hiệu ứng trạng thái</div>
+                <div class="button">QTEs</div>
+           </div>
+        </div>
+        <div class="column">
+            <h4>Charater</h4>
+            <div class="columnb">
+                <div class="button">Tộc</div>
+                <div class="button">Kĩ năng</div>
+                <div class="button">Hệ phái</div>
+            </div>
+        </div>
+        <div class="column">  
+            <h4>World Elements</h4>  
+            <div class="columnb">
+                <div class="button">Vũ khí</div>
+                <div class="button">Áo giáp</div>
+                <div class="button">Trang bị</div>
+                <div class="button">Cuộn kĩ năng</div>
+                <div class="button">Phù phép (enchant)</div>
+                <div class="button">Quái vật</div>
+                <div class="button">Quặng khoáng sản</div>
+                <div class="button">Thời trang</div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade bd-example-modal-lg" id="thong-tin-game" tabindex="-1" role="dialog" aria-labelledby="thong-tin-game" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-center" id="exampleModalLongTitle">About Game</h5>
+            </div>
+            <div class="modal-body custom-modal-body">
+                    <img src="D:/42-NguyenVanVu-BaiTapLon/images/aboutgame.jpg" alt="aboutgame" style="width: 60%; display: block; margin: 0 auto;">
+                    <h5>Giới thiệu</h5>
+                    <p>- Arcane Lineage là một trò chơi chiến đấu theo lượt hardcore, chuyên về các lớp nhân vật, tăng cường sức mạnh qua trận đấu và đánh bại những kẻ thù mạnh mẽ khi bạn di chuyển giữa các vùng đất.</p>
+                    <p>- Trò chơi này được thiết kế để chơi theo nhóm, chơi một mình sẽ khiến trò chơi này khó hơn với bạn. Trò chơi này hầu như không có sự hỗ trợ, và sẽ rất khó khăn.</p>
+                    <h5>Thể loại:</h5>
+                    <p>- RPG, Roguelike</p>
+                    <h5>Thời gian phát hành:</h5>
+                    <p>- 15/8/2022</p>
+                    <h5>Điều khiển</h5>
+                    <p>- Q: Lướt</p>
+                    <p>- M: Ngồi thiền (trên thảm)</p>
+                    <p>- B/tidle(`): Mở túi đồ/Bảng trạng thái</p>
+                    <p>- Space: Kích hoạt QTEs, </p>
+                    <h5>Credit</h5>
+                    <p> - NuovaPrimed (Scripting, Animation, GFX)</p>
+                    <p> - Birdencoat (Scripting, Modeling, VFX)</p>
+                    <p> - Jifaarencoat (Scripting, Modeling)</p>
+                    <p> - Hikari_Yami (Scripting)</p>
+                    <p> - shurawei (Scripting)</p>
+                    <p> - matrodeus (VFX, SFX)</p>
+                    <p> - TheGreatAnubis (Modeling)</p>
+                    <p> - RuneArtifact (Music)</p>
+                    <P> - ivan11230 (Building)</P>
+                    <p> - xVaxtty (Building)</p>
+                    <p> - vcize (Modeling)</p>
+                    <P> - Elyvita (Clothing)</P>
+                    <p> - Blotnik (Clothing)</p>
+                
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade bd-example-modal-lg" id="Level" tabindex="-1" role="dialog" aria-labelledby="level" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-center" id="exampleModalLongTitle">Phân bổ chỉ số và cấp độ</h5>
+            </div>
+            <div class="modal-body custom-modal-body">
+                <h5>Phân bổ chỉ số</h5>
+                <P>- Bạn nhận được 3 điểm thuộc tính mỗi khi lên level. Cứ mỗi 5 lên 5 level tất cả thuộc tính đều sẽ tự động tăng 1</P>
+                <p>- Bạn có thể tăng chỉ số  bằng cách đến đệm thền và bấm M. Sau một lúc bạn sẽ được dịch chuyển đến Spirit Realm, nhấn M lần nữa bạn sẽ quay trở lại.</p>
+                <p>- Nói chuyện với Aretim, Raphion's Servant để tăng cấp độ và phân bổ chỉ số.</p>
+                <img src="images/level.jpg" alt="level" style="width: 60%; display: block; margin: 0 auto;">
+                <h5>Thuộc tính</h5>
+                <h6><i>~ Chỉ số cơ bản</i> </h6>
+                <p>- 5 thuộc tính sau có thể tăng bằng cách lên cấp,  soul tree và trang bị.</p>
+                <h6>*Strength</h6>
+                <p>- Tăng lượng sát thương bạn gây ra từ các đòn tấn công vật lý lên 1,32% với mỗi điểm (cộng dồn).</p>
+                <h6>*Arcane</h6>
+                <p>- Tăng lượng sát thương bạn gây ra từ các đòn tấn công phép thuật lên 1,32% với mỗi điểm (cộng dồn)</p>
+                <h6>*Endurance</h6>
+                <p>- Tăng lượng máu của bạn lên 1,5 với mỗi điểm.</p>
+                <p>- Càng nhiều máu bạn có, càng nhiều lượng hồi phục máu bạn bạn nhận được.</p>
+                <h6>*Speed</h6>
+                <p>- Với mỗi điểm sẽ tăng nhẹ kích thước thanh chặn và né tránh của bạn (to hơn 2,5% với chặn và 1,6% với né)</p>
+                <p>- Với mỗi điểm sẽ tăng nhẹ tốc độ khi chạy.</p>
+                <p>- Cứ mỗi 100 điểm speed, QTEs sẽ giảm đi 1 lần nhấn.</p>
+                <p>- Chỉ riêng với Stulus, họ sẽ nhận thêm tỉ lệ chí mạng dựa trên điểm Speed.</p>
+                <h6>*Luck</h6>
+                <p>- Với mỗi điểm, tăng 0,2% tỉ lệ chí mạng.</p>
+                <p>- Với mỗi 2 điểm, tăng 0,02x sát thương chí mạng.</p>
+                <p>- Khi đạt 100 điểm, chắc chắn nhận được trang bị trên Old.</p>
+                <p>- Khi đạt 200 điểm, chắc chắn nhận được trang bị trên Average</p>
+                <p>- Mỗi điểm Luck cũng tăng tỉ lệ đồ tốt hơn và lượng Essence bạn nhận được.</p>
+                <h6><i>~ Chỉ số đặc biệt</i></h6>
+                <p>- Các chỉ số sau đây chỉ có thể được tăng thông qua soul tree, trang bị hoặc là kết quả phụ của một chỉ số cơ bản.</p>
+                <h6>*Critical damage</h6>
+                <p>Tăng sát thương cuối cùng ra bởi một đòn tấn công.</p>
+                <h6>*Critical chance</h6>
+                <p>- Tỉ lệ đòn tấn công gây sát thương chí mạng</p>
+                <p>- Nếu bạn có tỉ lệ chí mạng trên 100%, bạn có thể chí mạng gấp đôi. Điều này áp dụng cho mỗi cột mốc 100%, ví dụ như 200%, 300% và tương ứng với chí mạng gấp ba, gấp bốn.</p>
+                <h6>*Outgoing Healing</h6>
+                <p>Tăng lượng hồi phục tạo ra</p>
+                <h6>*Incoming Healing</h6>
+                <p>Tăng lượng hồi phục nhận vào.</p>
+                <h5>Yêu cầu để tăng cấp </h5>
+                <p>level 1 : N/A </p>
+                <p>level 2 : 21 Essence</p>
+                <p>level 3 : 24 Essence</p>
+                <p>level 4 : 29 Essence</p>
+                <p>level 5 : 36 Essence (mở khóa class cơ bản và class phụ)</p>
+                <p>level 6 : 45 Essence</p>
+                <p>level 7 : 56 Essence</p>
+                <p>level 8 : 69 Essence</p>
+                <p>level 9 : 84 Essence</p>
+                <p>level 10 : 101 Essence (có thể tham gia liên liên minh)</p>
+                <p>level 11 : 120 Essence</p>
+                <p>level 12 : 141 Essence</p>
+                <p>level 13 : 164 Essence</p>
+                <p>level 14 : 189 Essence</p>
+                <p>level 15 : 216 Essence (mở khóa class siêu cấp/skill đầu tiên của class siêu cấp)</p>
+                <p>level 16 : 245 Essence</p>
+                <p>level 17 : 276 Essence (học được skill thứ 2 của class siêu cấp)</p>
+                <p>level 18 : 309 Essence</p>
+                <p>level 19 : 344 Essence (học được skill thứ 3 của class siêu cấp)</p>
+                <P>level 20 : 381 Essence (có thể dùng Lineage Shard)</P>
+                <i>~ Bạn có thể giữ tối đa tinh chất để nâng 3 level, nghĩa là lv 1 bạn chỉ có thể tích để lên được tối đa lên lv 4</i>
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade bd-example-modal-lg" id="gamemode" tabindex="-1" role="dialog" aria-labelledby="gamemode" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-center" id="exampleModalLongTitle">Chế độ chơi</h5>
+            </div>
+            <div class="modal-body custom-modal-body">
+                <p>Arcane Lineage cho phép người chơi giảm hoặc tăng độ khó của trò chơi, đồng thời cung cấp phần thưởng nếu người chơi chọn độ khó cao hơn so với lần trước. Dưới đây là danh sách ba mức độ khó khác nhau, các hiệu ứng của chúng và phần thưởng mà bạn có thể nhận được. Bạn phải đạt Cấp 1 để thay đổi độ khó.</p>
+                <p>_____________________________________________________________________________________________________________________</p>
+                <h5>Normal mode</h5>
+                <p>- Hiệu ứng: Bạn nhận được hồi máu miễn phí từ bác sĩ, độ khó của các cuộc chạm trán vẫn giữ nguyên.</p>
+                <p>- Phần thưởng: Không có.</p>
+                <p>_____________________________________________________________________________________________________________________</p>
+                <h5>Hard mode</h5>
+                <p>- Hiệu ứng: Hồi máu từ bác sĩ giờ tốn phí 25 vàng, tăng lên 37.5 vàng ở cấp độ tối đa. Giá cửa hàng cũng tăng, độ khó các cuộc chạm trán tăng lên, và bạn bị giới hạn 3 mạng.</p>
+                <p>- Phần thưởng: Tỉ lệ rơi đồ x2, vàng nhận được x1.3 và Essence nhận được x2. Có thể lấy được vật phẩm độc quyền của chế độ Khó.</p>
+                <p>_____________________________________________________________________________________________________________________</p>
+                <h5>Legendary mode</h5>
+                <p>- Hiệu ứng: Việc hồi máu qua bác sĩ giờ tiêu tốn 50 vàng, 75 vàng khi vượt cấp 35, giá đồ trong cửa hàng tăng thêm, độ khó của các cuộc chạm trán tiếp tục tăng và bạn chỉ còn 1 mạng.</p>
+                <p>- Phần thưởng: Tỉ lệ rơi đồ tăng 3 lần, vàng nhận được tăng 2 lần và Essence  nhận được tăng 3 lần. Có thể nhận các vật phẩm chỉ xuất hiện ở chế độ Huyền Thoại. Những chủng tộc có hơn 3 mạng sẽ có cơ hội nhận năng lượng gấp đôi thay thế.</p>
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
